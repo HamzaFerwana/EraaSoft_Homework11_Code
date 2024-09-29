@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Point of Sale</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+
+  <div class="login-wrapper">
+    <h1>Welcome Back!</h1>
+    <small style="color: #808080;">Please sign in to continue (Sales ID Number: 1234, Password: 5678)</small>
+    <div class="login-inputs d-flex flex-column gap-3 mt-4">
+      <input type="text" placeholder="Sales ID Number" id="sales-id-number" class="form-control">
+      <input type="text" placeholder="Password" id="password" class="form-control">
+    </div>
+    <button id="login-button" class="mt-4" onclick="checkCredits()">
+      <h3>Sign in</h3>
+    </button>
+  </div>
+
+  <div class="page-wrapper">
+
+    <div class="sidebar">
+      <div class="logo d-flex gap-4 justify-content-center pt-3 mb-3">
+        <i class="fas fa-briefcase fs-2" style="color: darkred;"></i>
+        <h3>Smart<span style="color: darkred;">POS</span></h3>
+      </div>
+
+      <div class="logo d-flex gap-4 justify-content-center pt-3 mb-3">
+        <button class="sidebar-button active" id="dashboard-btn"><i class="fas fa-gauge fs-4"></i> Dashboard</button>
+      </div>
+
+      <div class="logo d-flex gap-4 justify-content-center pt-3 mb-3">
+        <button class="sidebar-button" id="food-btn"><i class="fas fa-burger fs-4"></i> Food & Drinks</button>
+      </div>
+
+      <div class="logo d-flex gap-4 justify-content-center pt-3 mb-3">
+        <button class="sidebar-button"><i class="fas fa-message fs-4"></i>Messages</button>
+      </div>
+
+      <div class="logo d-flex gap-4 justify-content-center pt-3 mb-3">
+        <button class="sidebar-button"><i class="fas fa-money-bills fs-4"></i> Bills</button>
+      </div>
+
+      <div class="logo d-flex gap-4 justify-content-center pt-3 mb-3">
+        <button class="sidebar-button"><i class="fas fa-sliders fs-4"></i> Settings</button>
+      </div>
+
+      <div class="logo d-flex gap-4 justify-content-start pt-3 mb-3" style="padding-left: 30px; color: #808080;">
+        <small>Other</small>
+      </div>
+
+      <div class="logo d-flex gap-4 justify-content-center pt-3 mb-3">
+        <button class="sidebar-button"><i class="fas fa-envelope fs-4"></i> Notifications <div
+            style="border-radius: 50%; background-color: #ffca40; width: 30px;">3</div></button>
+      </div>
+
+      <div class="logo d-flex gap-4 justify-content-center pt-3 mb-3">
+        <button class="sidebar-button"><i class="fas fa-user fs-4"></i> Support</button>
+      </div>
+
+    </div>
+
+    <div class="categories">
+      <h1>Categories</h1>
+      <div class="actual d-flex align-items-center gap-5">
+        <!-- <div class="category mt-5" id="cold-drinks-cat">
+          <img src="./img/cold-drink-cat.webp" height="150" width="150" style="object-fit: cover;">
+          <h2>Cold Drinks</h2>
+        </div> -->
+
+        <div class="category mt-5" id="burger-cat">
+          <img src="./img/burger-cat.png" height="150" width="200" style="object-fit: cover;">
+          <h2>Burgers</h2>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="burgers">
+      <h1>Burgers</h1>
+      <div class="actual d-flex align-items-center gap-5">
+        <div class="category mt-5" id="hamburger">
+          <img src="./img/hamburger.png" height="150" width="150" style="object-fit: cover;">
+          <h2>Hamburger: $6</h2>
+        </div>
+
+        <div class="category mt-5" id="beef-burger">
+          <img src="./img/beef-burger.jpeg" height="150" width="200" style="object-fit: cover;">
+          <h2>Beef Burger: $8</h2>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="orders">
+      <table class="table table-bordered table-hover table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>count</th>
+            <th>Price</th>
+            <th>total</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="insertable-section">
+        </tbody>
+        <tfoot>
+          <tr>
+            <th colspan="4">Total</th>
+            <th id="total"></th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
